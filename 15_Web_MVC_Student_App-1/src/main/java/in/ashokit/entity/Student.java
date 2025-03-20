@@ -2,7 +2,7 @@ package in.ashokit.entity;
 
 import lombok.Data;
 @Data
-public class StudentEntity {
+public class Student {
 	private String name;
 	private String email;
 	private String gender;
