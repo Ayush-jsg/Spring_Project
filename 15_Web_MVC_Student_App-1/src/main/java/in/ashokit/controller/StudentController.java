@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import in.ashokit.entity.Student;
+import in.ashokit.binding.Student;
 import in.ashokit.service.StudentService;
 
 @Controller
@@ -35,10 +35,14 @@ public class StudentController {
 
 	@PostMapping("/save")
 	public String saveStudent(Student s, Model model) {
-		System.out.println(s);
-		model.addAttribute("msg", "Data saved..");
-		formInitBinding(model);
 
+		boolean issaved = service.saveStudent(s);
+		if (issaved) {
+			model.addAttribute("msg", "Data saved..");
+
+		}
+
+		formInitBinding(model);
 		return "index";
 
 	}

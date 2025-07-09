@@ -1,4 +1,4 @@
-package in.ashokit.entity;
+package in.ashokit.binding;
 
 import lombok.Data;
 @Data

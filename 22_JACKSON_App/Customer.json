@@ -1,0 +1,11 @@
+ {
+	"id": 1,
+	"name": "Robot",
+	"gmail": "robot@gmail.com",
+	"pno": 99989702,
+	"addr": {
+		"city": "hyd",
+		"state": "TG",
+		"country": "india"
+	}
+}

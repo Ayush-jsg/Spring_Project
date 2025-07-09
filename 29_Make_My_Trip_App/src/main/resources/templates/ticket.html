@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+
+<head>
+	<title>HTML Headings Example</title>
+</head>
+
+<body>
+	<h3> Get Ticket Info </h3>
+
+	<form th:action="@{/get-ticket}">
+
+		Enter Ticket Number : <input type="text" name="ticketNumber" />
+		<input type="submit" value="Get Ticket" />
+
+
+
+
+	</form>
+	<hr />
+
+	<table>
+		<tr>
+			<td> Name:</td>
+			<td>
+				<p th:text="${ticket.name}" />
+			</td>
+		</tr>
+		<tr>
+			<td> From:</td>
+			<td>
+				<p th:text="${ticket.from}" />
+			</td>
+		</tr>
+		<tr>
+			<td>To:</td>
+			<td>
+				<p th:text="${ticket.to}" />
+			</td>
+		</tr>
+		<tr>
+			<td> Doj:</td>
+			<td>
+				<p th:text="${ticket.doj}" />
+			</td>
+		</tr>
+		<tr>
+			<td> Status: </td>
+			<td>
+				<p th:text="${ticket.status}" />
+			</td>
+		</tr>
+		<tr>
+			<td> Cost:</td>
+			<td>
+				<p th:text="${ticket.ticketCost}" />
+			</td>
+		</tr>
+
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
